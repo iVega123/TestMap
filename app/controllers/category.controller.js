@@ -15,7 +15,7 @@ exports.create = (req, res) => {
       });
     
       // Salva o Objeto no banco
-      article
+      category
         .save(category)
         .then(data => {
           res.send(data);

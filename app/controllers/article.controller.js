@@ -4,7 +4,7 @@ const Article = db.article;
 // Cria e Salva o Objeto
 exports.create = (req, res) => {
     // Valida o Pedido
-    if (!req.body.title) {
+    if (!req.body.titulo) {
         res.status(400).send({ message: "Content can not be empty!" });
         return;
       }
