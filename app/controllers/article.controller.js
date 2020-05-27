@@ -13,7 +13,9 @@ exports.create = (req, res) => {
       const article = new Article({
         titulo: req.body.titulo,
         corpo: req.body.corpo,
-        autor: req.body.autor
+        autor: req.body.autor,
+        published: req.body.published,
+        Categorias: req.body.Categorias
       });
     
       // Salva o Objeto no banco
@@ -128,7 +130,7 @@ exports.deleteAll = (req, res) => {
     });
 };
 
-// Acha todos os elementos publicados no banco de dados.
+// Acha todos os artigos publicados no banco de dados.
 exports.findAllPublished = (req, res) => {
     Article.find({ published: true })
     .then(data => {
